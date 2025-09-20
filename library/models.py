@@ -1,27 +1,44 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=150, verbose_name='Имя')
-    last_name = models.CharField(max_length=150, verbose_name='Фамилия')
-    birth_date = models.DateField(verbose_name='Дата рождения')
-
-    def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100, blank=True)
+    bio = models.TextField(blank=True)
 
     class Meta:
-        verbose_name = 'автор'
-        verbose_name_plural = 'авторы'
-        ordering = ['last_name']
+        ordering = ['first_name', 'last_name']
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}".strip()
 
 class Book(models.Model):
-    title = models.CharField(max_length=200, verbose_name='Название')
-    publication_date = models.DateField(verbose_name='Дата публикации')
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+    title = models.CharField(max_length=255)
+    authors = models.ManyToManyField(Author, related_name='books')
+    genre = models.CharField(max_length=100, blank=True)
+    published_year = models.PositiveIntegerField(null=True, blank=True)
+    isbn = models.CharField(max_length=13, unique=True, blank=True)
+    total_copies = models.PositiveIntegerField(default=1)
+    available_copies = models.PositiveIntegerField(default=1)
+
+    class Meta:
+        ordering = ['title']
 
     def __str__(self):
         return self.title
 
+class Loan(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='loans')
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='loans')
+    borrowed_at = models.DateTimeField(auto_now_add=True)
+    due_date = models.DateField()
+    returned_at = models.DateTimeField(null=True, blank=True)
+
     class Meta:
-        verbose_name = 'книга'
-        verbose_name_plural = 'книги'
-        ordering = ['title']
+        ordering = ['-borrowed_at']
+
+    @property
+    def is_returned(self):
+        return self.returned_at is not None

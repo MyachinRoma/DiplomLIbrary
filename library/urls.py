@@ -1,9 +1,12 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import AuthorViewSet, BookViewSet, LoanViewSet
 
-from library.apps import LibraryConfig
-
-app_name = LibraryConfig.name
+router = DefaultRouter()
+router.register(r'authors', AuthorViewSet, basename='author')
+router.register(r'books', BookViewSet, basename='book')
+router.register(r'loans', LoanViewSet, basename='loan')
 
 urlpatterns = [
-    path('',),
+    path('', include(router.urls)),
 ]
