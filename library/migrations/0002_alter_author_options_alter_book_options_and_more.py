@@ -8,93 +8,115 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('library', '0001_initial'),
+        ("library", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='author',
-            options={'ordering': ['first_name', 'last_name']},
+            name="author",
+            options={"ordering": ["first_name", "last_name"]},
         ),
         migrations.AlterModelOptions(
-            name='book',
-            options={'ordering': ['title']},
+            name="book",
+            options={"ordering": ["title"]},
         ),
         migrations.RemoveField(
-            model_name='author',
-            name='birth_date',
+            model_name="author",
+            name="birth_date",
         ),
         migrations.RemoveField(
-            model_name='book',
-            name='author',
+            model_name="book",
+            name="author",
         ),
         migrations.RemoveField(
-            model_name='book',
-            name='publication_date',
+            model_name="book",
+            name="publication_date",
         ),
         migrations.AddField(
-            model_name='author',
-            name='bio',
+            model_name="author",
+            name="bio",
             field=models.TextField(blank=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='authors',
-            field=models.ManyToManyField(related_name='books', to='library.author'),
+            model_name="book",
+            name="authors",
+            field=models.ManyToManyField(related_name="books", to="library.author"),
         ),
         migrations.AddField(
-            model_name='book',
-            name='available_copies',
+            model_name="book",
+            name="available_copies",
             field=models.PositiveIntegerField(default=1),
         ),
         migrations.AddField(
-            model_name='book',
-            name='genre',
+            model_name="book",
+            name="genre",
             field=models.CharField(blank=True, max_length=100),
         ),
         migrations.AddField(
-            model_name='book',
-            name='isbn',
+            model_name="book",
+            name="isbn",
             field=models.CharField(blank=True, max_length=13, unique=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='published_year',
+            model_name="book",
+            name="published_year",
             field=models.PositiveIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='total_copies',
+            model_name="book",
+            name="total_copies",
             field=models.PositiveIntegerField(default=1),
         ),
         migrations.AlterField(
-            model_name='author',
-            name='first_name',
+            model_name="author",
+            name="first_name",
             field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
-            model_name='author',
-            name='last_name',
+            model_name="author",
+            name="last_name",
             field=models.CharField(blank=True, max_length=100),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='title',
+            model_name="book",
+            name="title",
             field=models.CharField(max_length=255),
         ),
         migrations.CreateModel(
-            name='Loan',
+            name="Loan",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('borrowed_at', models.DateTimeField(auto_now_add=True)),
-                ('due_date', models.DateField()),
-                ('returned_at', models.DateTimeField(blank=True, null=True)),
-                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='loans', to='library.book')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='loans', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("borrowed_at", models.DateTimeField(auto_now_add=True)),
+                ("due_date", models.DateField()),
+                ("returned_at", models.DateTimeField(blank=True, null=True)),
+                (
+                    "book",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="loans",
+                        to="library.book",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="loans",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-borrowed_at'],
+                "ordering": ["-borrowed_at"],
             },
         ),
     ]

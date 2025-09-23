@@ -16,6 +16,11 @@ django-filter = "^25.1"
 drf-spectacular = "^0.28.0"
 
 
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.3.0"
+black = "^25.9.0"
+isort = "^6.0.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
