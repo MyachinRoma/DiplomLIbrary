@@ -137,7 +137,7 @@ class Command(BaseCommand):
             )
             users.append(u)
 
-        if options["create-admin"]:
+        if options.get("create-admin"):
             if not User.objects.filter(is_superuser=True).exists():
                 User.objects.create_superuser(
                     "admin", "admin@example.com", "admin12345"
