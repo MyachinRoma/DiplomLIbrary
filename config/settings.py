@@ -1,8 +1,8 @@
 import os
 from datetime import timedelta
 from pathlib import Path
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -96,7 +96,8 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [p for p in [BASE_DIR / "static"] if p.exists()]  # добавляет только если папка есть
+STATICFILES_DIRS = [p for p in [BASE_DIR / "static"] if p.exists()]
+# добавляет только если папка есть
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
