@@ -1,0 +1,447 @@
+[
+  {
+    "model": "library.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "Имя1",
+      "last_name": "Фамилия1",
+      "bio": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 2,
+    "fields": {
+      "first_name": "Имя2",
+      "last_name": "Фамилия2",
+      "bio": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 3,
+    "fields": {
+      "first_name": "Имя3",
+      "last_name": "Фамилия3",
+      "bio": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 4,
+    "fields": {
+      "first_name": "Имя4",
+      "last_name": "Фамилия4",
+      "bio": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 5,
+    "fields": {
+      "first_name": "Имя5",
+      "last_name": "Фамилия5",
+      "bio": ""
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+      "title": "Демо-книга 1",
+      "genre": "",
+      "published_year": 1995,
+      "isbn": "9780302054838",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+      "title": "Демо-книга 2",
+      "genre": "",
+      "published_year": 2011,
+      "isbn": "9780598125386",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+      "title": "Демо-книга 3",
+      "genre": "",
+      "published_year": 2010,
+      "isbn": "9780381778011",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+      "title": "Демо-книга 4",
+      "genre": "",
+      "published_year": 2005,
+      "isbn": "9780443787491",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+      "title": "Демо-книга 5",
+      "genre": "",
+      "published_year": 1993,
+      "isbn": "9780338501593",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+      "title": "Демо-книга 6",
+      "genre": "",
+      "published_year": 1992,
+      "isbn": "9780771791567",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+      "title": "Демо-книга 7",
+      "genre": "",
+      "published_year": 2017,
+      "isbn": "9780200874433",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 8,
+    "fields": {
+      "title": "Демо-книга 8",
+      "genre": "",
+      "published_year": 2013,
+      "isbn": "9780274653236",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 9,
+    "fields": {
+      "title": "Демо-книга 9",
+      "genre": "",
+      "published_year": 2016,
+      "isbn": "9780870325864",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 10,
+    "fields": {
+      "title": "Демо-книга 10",
+      "genre": "",
+      "published_year": 2011,
+      "isbn": "9780117997968",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 11,
+    "fields": {
+      "title": "Демо-книга 11",
+      "genre": "",
+      "published_year": 2017,
+      "isbn": "9780124977942",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 12,
+    "fields": {
+      "title": "Демо-книга 12",
+      "genre": "",
+      "published_year": 2025,
+      "isbn": "9780600169093",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 13,
+    "fields": {
+      "title": "Демо-книга 13",
+      "genre": "",
+      "published_year": 2006,
+      "isbn": "9780146805197",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 14,
+    "fields": {
+      "title": "Демо-книга 14",
+      "genre": "",
+      "published_year": 2009,
+      "isbn": "9780186937988",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 15,
+    "fields": {
+      "title": "Демо-книга 15",
+      "genre": "",
+      "published_year": 2016,
+      "isbn": "9780816655484",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 16,
+    "fields": {
+      "title": "Демо-книга 16",
+      "genre": "",
+      "published_year": 1991,
+      "isbn": "9780684759903",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 17,
+    "fields": {
+      "title": "Демо-книга 17",
+      "genre": "",
+      "published_year": 2004,
+      "isbn": "9780109631718",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 18,
+    "fields": {
+      "title": "Демо-книга 18",
+      "genre": "",
+      "published_year": 2015,
+      "isbn": "9780308134062",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 19,
+    "fields": {
+      "title": "Демо-книга 19",
+      "genre": "",
+      "published_year": 2021,
+      "isbn": "9780937178407",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 20,
+    "fields": {
+      "title": "Демо-книга 20",
+      "genre": "",
+      "published_year": 2000,
+      "isbn": "9780922273952",
+      "total_copies": 1,
+      "available_copies": 1,
+      "authors": []
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 1,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 2,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 3,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 4,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 5,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 6,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 7,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 8,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 9,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 10,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 11,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 12,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 13,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 14,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 15,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 16,
+    "fields": {
+      "returned_at": null
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 17,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 18,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 19,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  },
+  {
+    "model": "library.borrowing",
+    "pk": 20,
+    "fields": {
+      "returned_at": "2025-09-25"
+    }
+  }
+]

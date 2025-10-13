@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      NAME: ${NAME:-library_project}
+      USER: ${USER:-library_user}
+      PASSWORD: ${PASSWORD:-library_password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  web:
+    build: .
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3
+    environment:
+      DJANGO_DEBUG: ${DJANGO_DEBUG:-False}
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-change-me}
+      NAME: ${NAME:-library_project}
+      USER: ${USER:-library_user}
+      PASSWORD: ${PASSWORD:-library_password}
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-*}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+volumes:
+  pgdata:
